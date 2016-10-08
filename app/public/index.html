@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" width="device-width" initial-scale="1">
+        <title>League of legends</title>
+        <!-- Google fonts -->
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+        <!-- My css -->
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <!-- Angular Material -->
+        <link rel="stylesheet" href="css/angular-material.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        
+
+    </head>
+    <body ng-app="LeagueOfLegends" ng-controller="mainCtrl as main">
+        <div data-ng-controller="mainCtrl" data-ng-init="init()"></div>
+        <!--  HEADER  -->
+        <header class="subHeader" id="subHeader">
+           
+            <div class="container text-center">
+                <h1>SEARCH<br>ENGINE</h1>
+            </div>
+                        
+            <main-navbar></main-navbar>
+
+        </header>
+        
+        <!-- main -->
+        <main class="main-wrapper" ng-controller="loginCtrl as login">
+            <section ng-view ng-show="isLogedIn"></section>
+            <section class="loginView text-center" ng-hide="isLogedIn">
+                <login ng-show="isActive(1)"></login>
+                <signup ng-show="isActive(2)"></signup>
+            </section>
+        </main>
+       
+        <!-- JQuery -->
+        <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <!-- bootstrap -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" 
+                integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" 
+                crossorigin="anonymous"></script>
+
+        <!-- angular min -->
+        <script src="js/lib/angular/angular.min.js"></script>
+        <script src="js/lib/angular/angular-route.min.js"></script>
+        <script src="js/lib/angular/angular-cookies.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js"></script>
+        <script src="js/lib/angular/angular-material.js"></script>
+        <script src="js/lib/angular/angular-material-mocks.js"></script>
+
+        <!-- angular module -->
+        <script src="js/app.js"></script>
+        <!-- angular controllers -->
+        <script src="controllers/mainCtrl.js"></script>
+        <script src="controllers/loginCtrl.js"></script>
+        <script src="controllers/eventCtrl.js"></script> 
+        <!-- angular directives --> 
+        <script src="directives/login.js"></script>
+        <script src="directives/signup.js"></script>
+        <script src="directives/navbar.js"></script>
+         
+
+    </body>
+</html>
